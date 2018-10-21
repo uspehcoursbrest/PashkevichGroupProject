@@ -6,14 +6,15 @@
 
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
     <div class="container">
         <div class="left">
-            <a href="#">
+            <a href="#" class="login">
                 <span class="icon-user"></span>Войти в личный кабинет</a>
-            <ul>
+            <ul class="menu">
                 <li><a href="#">Оптовикам</a></li>
                 <li><a href="#">Корпоративным клиентам </a></li>
                 <li><a href="#">Доставка и оплата</a></li>
@@ -22,18 +23,17 @@
             </ul>
         </div>
         <div class="logo">
-            <a href="#">
-                <img src="" alt=""></a>
+            <a href="#"><img src="" alt=""></a>
         </div>
         <div class="right">
-            <a href="tel:8(495)648-8-456">
+            <a href="tel:8(495)648-8-456" class="phone">
                 <span class="icon-phone"></span>8 (495) 648-8-456
             </a>
-            <a href="#">Не дозвонились?</a>
-            <p>
+            <a href="#" class="callback">Не дозвонились?</a>
+            <p class="timing">
                 Мы работаем пн-пт 10:00 - 19:00
             </p>
-            <a href="#">товаров<span> 5 </span> на сумму <span> 2550 ₽ </span></a>
+            <a href="#" class="basket">товаров<span> 5 </span> на сумму <span> 2550 ₽ </span></a>
         </div>
     </div>
 </header>
@@ -43,7 +43,7 @@
             <div class="sale"></div>
             <div class="slider"></div>
         </div>
-        <div class="advsub">
+        <div class="advSub">
             <div class="advantages">
                 <div class="item"><img src="" alt="">
                     <span>Возврат товара</span>
@@ -74,9 +74,10 @@
                 <form action="#">
                     <label for="text">Узнавайте о новинках первыми!</label>
                     <input type="text" id="text" placeholder="Введите ваш e-mail">
-                    <div>
+                    <div class="wrap">
                         <button>Подписаться на рассылку</button>
-                        <span>Обещаем НЕ спамить</span></div>
+                        <span>Обещаем НЕ спамить</span>
+                    </div>
                 </form>
             </div>
         </div>
@@ -93,7 +94,7 @@
                     <li><a href="#">Любимой</a></li>
                     <li><a href="#">Лучшему другу</a></li>
                 </ul>
-                <div>
+                <div class="view">
                     <span></span>
                     <span></span>
                 </div>
@@ -310,21 +311,22 @@
         </div>
         <div class="socials">
             <h3>Мы в социальных сетях</h3>
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="wrap">
+                <div class="socialItem"></div>
+                <div class="socialItem"></div>
+                <div class="socialItem"></div>
             </div>
         </div>
         <div class="info">
-            <ul>
+            <ul class="tabs">
                 <li><a href="#">Интернет-магазин керамических фигурок</a></li>
                 <li><a href="#">Керамические фигурки</a></li>
                 <li><a href="#">Подарки на новый год </a></li>
                 <li><a href="#">Подарок на день рождения</a></li>
             </ul>
             <div class="content">
-                <div><span>Интернет магазин керамических фигурок — красота и удобство</span>
+                <div class="accordion">
+                    <span class="title">Интернет магазин керамических фигурок — красота и удобство</span>
                     <div>
                         <p>Интернет магазин керамических фигурок может обеспечить на выбор разнообразие интересных и
                             оригинальных травянчиков – настоящий подарок для тех, кому важна красота и гармония в
@@ -345,7 +347,8 @@
                             выращивания травы и различных цветов.</p>
                     </div>
                 </div>
-                <div><span>Интернет магазин керамических фигурок — сочетание простоты и удобства</span>
+                <div class="accordion">
+                    <span class="title">Интернет магазин керамических фигурок — сочетание простоты и удобства</span>
                 </div>
             </div>
         </div>
@@ -353,15 +356,15 @@
 </div>
 <footer>
     <div class="container">
-        <ul>
-            <li>
+        <ul class="footMenu">
+            <li class="call">
                 <ul>
                     <li><a href="#">Оптовикам</a></li>
                     <li><a href="#">Корпоративным клиентам</a></li>
                     <li><a href="#">Войти в личный кабинет</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="call">
                 <ul>
                     <li><a href="#">Доставка и оплата</a></li>
                     <li><a href="#">О мастерской</a></li>
@@ -369,21 +372,22 @@
                 </ul>
             </li>
         </ul>
-        <div>
+        <div class="contacts">
             <a href="#">8 (945) 648-8-456</a>
             <a href="#">ecocheloveki@gmail.com</a>
             <span>пн-пт 10:00 - 19:00</span>
             <span>Ищите нас здесь</span>
-            <a href="#" class="icon-vk"></a>
-            <a href="#" class="icon-twitter"></a>
-            <a href="#" class="icon-facebook"></a>
+            <a href="#" class="icon-vk socLink"></a>
+            <a href="#" class="icon-twitter socLink"></a>
+            <a href="#" class="icon-facebook socLink"></a>
         </div>
     </div>
-    <div>
+    <div class="copyright">
         <span>© 2011-2014 Экочеловечки</span>
         <span>Все права защищены</span>
         <span>Все цены указаны в рублях</span>
-        <span>Разработка <a href="#">«Биат»</a></span></div>
+        <span>Разработка <a href="#">«Биат»</a></span>
+    </div>
 </footer>
 </body>
 </html>
