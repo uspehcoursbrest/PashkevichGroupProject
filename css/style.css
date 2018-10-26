@@ -250,6 +250,53 @@ footer a.socLink {
 }
 
 
+.pictureNews {
+    height: 210px;
+    width: 980px;
+    background-color: #b3b3b3;
+}
+
+.breadcrumbs {
+    font-size: 12px;
+    line-height: 22px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.newsOne {
+    font-size: 25px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.newsTwo {
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.dataSept {
+    font-size: 12px;
+    line-height: 22px;
+    color: #aaaaaa;
+}
+
+.textNews {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.otherNews {
+    font-size: 13px;
+    line-height: 22px;
+    color: #0069b4;
+}
+
+
+
+
+
 
 
 
