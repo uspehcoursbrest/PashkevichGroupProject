@@ -27,7 +27,12 @@ ul {
     width: 1010px;
     margin: 0 auto;
     padding: 0 15px;
+}
 
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 header .login {
@@ -40,6 +45,11 @@ header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
+}
+
+header .menu li {
+    display: inline-block;
+    margin-right: 18px;
 }
 
 header .phone {
@@ -91,11 +101,22 @@ header .phone [class*="icon"] {
     font-size: 20px;
 }
 
+.advantages {
+    width: calc(100% - 320px);
+    float: left;
+}
+
+.advantages .item {
+    width: 25%;
+    float: left;
+}
+
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
     line-height: 17px;
     color: #333333;
+    display: block;
 }
 
 .advantages .item p {
@@ -106,6 +127,8 @@ header .phone [class*="icon"] {
 
 .subscribe {
     background-color: #64b94a;
+    width: 320px;
+    float: left;
 }
 
 .subscribe label {
@@ -137,6 +160,11 @@ header .phone [class*="icon"] {
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px dashed #666666;
+    display: inline-block;
+}
+
+.filter li + li {
+    margin-left: 20px;
 }
 
 .filter li a {
@@ -170,14 +198,17 @@ header .phone [class*="icon"] {
     font-weight: 600;
     line-height: 30px;
     color: #333333;
+    vertical-align: top;
+    display: inline-block;
 }
 
 .card .price .old {
     font-size: 14px;
     font-weight: normal;
-    line-height: 16px;
+    line-height: 25px;
     text-decoration: line-through;
     color: #666666;
+    vertical-align: top;
 }
 
 .card button {
@@ -188,6 +219,8 @@ header .phone [class*="icon"] {
     background-color: #ff7200;
     border: none;
     width: 100px;
+    display: block;
+    float: right;
 }
 
 .widgets h1 {
@@ -231,6 +264,27 @@ header .phone [class*="icon"] {
 
 .info .title {
     text-transform: uppercase;
+}
+
+footer .footMenu {
+    width: 50%;
+    float: left;
+}
+
+.footMenu .call {
+    width: 50%;
+    float: left;
+}
+
+footer .contacts{
+    width: 25%;
+    float: left;
+}
+
+footer .copyright {
+    width: 25%;
+    float: left;
+    text-align: right;
 }
 
 footer {
