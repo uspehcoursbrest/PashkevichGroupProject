@@ -35,6 +35,31 @@ ul {
     clear: both;
 }
 
+header .table {
+    display: table;
+    width: 100%;
+}
+
+header .left,
+header .logo,
+header .right {
+    display: table-cell;
+    width: 33.333%;
+    vertical-align: top;
+}
+
+header .logo {
+    text-align: center;
+}
+
+header .right {
+    text-align: right;
+}
+
+header .left {
+    text-align: left;
+    padding-right: 20px;
+}
 header .login {
     font-size: 13px;
     line-height: 19px;
@@ -129,6 +154,12 @@ header .phone [class*="icon"] {
     background-color: #64b94a;
     width: 320px;
     float: left;
+    padding: 20px;
+}
+
+.subscribe .wrap {
+    display: table;
+    width: 100%;
 }
 
 .subscribe label {
@@ -140,9 +171,13 @@ header .phone [class*="icon"] {
     font-size: 13px;
     line-height: 37px;
     color: #999999;
+    width: 100%;
+    border: none;
 }
 
 .subscribe button {
+    display: table-cell;
+    vertical-align: middle;
     font-size: 13px;
     line-height: 37px;
     text-align:center ;
@@ -154,7 +189,10 @@ header .phone [class*="icon"] {
 
 .subscribe .wrap span {
     font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
     color: rgba(255, 255, 255, 0.5);
+    padding-left: 10px;
 }
 .filter li {
     font-size: 13px;
@@ -172,6 +210,32 @@ header .phone [class*="icon"] {
     color: #666666;
 }
 
+.card {
+    position: relative;
+}
+
+.status {
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: -3px;
+    width: 43px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.status.hit {
+    background-color: #6eddcc;
+}
+
+.status.discount {
+    background-color: #ffed03;
+}
+
+.status.new {
+    background-color: #78ec71;
+}
 .card .img {
     width: 220px;
     height: 220px;
@@ -185,8 +249,20 @@ header .phone [class*="icon"] {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+    display: block;
 }
 
+.card .content {
+    min-height: 110px;
+    position: relative;
+}
+
+.card .content .buy {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+}
 .card a {
     font-size: 15px;
     line-height: 22px;
