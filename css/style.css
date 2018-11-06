@@ -5,14 +5,15 @@
 body {
     margin: 0 auto;
     font-family: "Open Sans";
-
 }
+
 
 input, textarea, button {
     font-family: "Open Sans";
 }
 
-h1, h2, h3, h4, h5, h6, p {
+
+h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 
@@ -26,38 +27,6 @@ ul {
     width: 1010px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-.invisLink {
-    position: relative;
-    z-index: 1;
-}
-
-.invisLink > a {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 7;
-    overflow: hidden;
-    text-indent: 200%;
-    white-space: nowrap;
-}
-
-.clear::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.tabs li {
-    padding: 0 15px;
-    display: inline-block;
-}
-header .table {
-    display: table;
 }
 
 .clear::after {
@@ -82,14 +51,6 @@ header .right {
 header .logo {
     text-align: center;
 }
-header .left {
-    padding-right: 20px;
-}
-header .left, header .logo, header .right{
-    display: table-cell;
-    width: 33%;
-    vertical-align: top;
-}
 
 header .right {
     text-align: right;
@@ -98,13 +59,6 @@ header .right {
 header .left {
     text-align: left;
     padding-right: 20px;
-}
-header .logo {
-    text-align: center;
-}
-
-header .right {
-    text-align: right;
 }
 header .login {
     font-size: 13px;
@@ -118,10 +72,6 @@ header .menu a {
     color: #333333;
 }
 
-header .menu li {
-    display: inline-block;
-    margin-right: 18px;
-}
 header .menu li {
     display: inline-block;
     margin-right: 18px;
@@ -142,7 +92,7 @@ header .callback {
     border-bottom: 1px dashed #0069b4;
 }
 
-header p.timing {
+header p.callback {
     font-size: 13px;
     line-height: 19px;
     color: #999999;
@@ -157,6 +107,7 @@ header .basket {
     padding-left: 28px;
     background-repeat: no-repeat;
     background-position: left center;
+
 }
 
 header .basket span {
@@ -168,20 +119,11 @@ header [class*="icon"] {
 }
 
 header .login [class*="icon"] {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 header .phone [class*="icon"] {
     font-size: 20px;
-}
-.banner .sale {
-    width: 305px;
-    height: 360px;
-}
-
-.banner .slider {
-    width: 640px;
-    height: 360px;
 }
 
 .advantages {
@@ -194,16 +136,6 @@ header .phone [class*="icon"] {
     float: left;
 }
 
-.banner > div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.banner {
-    display: flex;
-    justify-content: space-between;
-}
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
@@ -217,15 +149,7 @@ header .phone [class*="icon"] {
     line-height: 14px;
     color: #666666;
 }
-.advantages {
-    width: calc(100% - 320px);
-    float: left;
-}
 
-.advantages .item {
-    width: 25%;
-    float: left;
-}
 .subscribe {
     background-color: #64b94a;
     width: 320px;
@@ -236,10 +160,6 @@ header .phone [class*="icon"] {
 .subscribe .wrap {
     display: table;
     width: 100%;
-    background-color: #64ba4a;
-    width: 320px;
-    float: left;
-    padding: 20px;
 }
 
 .subscribe label {
@@ -260,13 +180,11 @@ header .phone [class*="icon"] {
     vertical-align: middle;
     font-size: 13px;
     line-height: 37px;
-    text-align: center;
-    color: #ffffff;
+    text-align:center ;
     width: 190px;
+    color: #ffffff;
     background-color: #259c47;
-    border: none;
-    display: table-cell;
-    vertical-align: middle;
+    border:none;
 }
 
 .subscribe .wrap span {
@@ -275,18 +193,7 @@ header .phone [class*="icon"] {
     vertical-align: middle;
     color: rgba(255, 255, 255, 0.5);
     padding-left: 10px;
-    color: rgba(255,255,255,0.5);
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 15px;
-    line-height: 1;
 }
-
-.subscribe .wrap {
-    display: table;
-    width: 100%;
-}
-
 .filter li {
     font-size: 13px;
     line-height: 16px;
@@ -296,13 +203,8 @@ header .phone [class*="icon"] {
 
 .filter li + li {
     margin-left: 20px;
-    display: inline-block;
-
 }
 
-.filter li+li {
-    margin-left: 20px;
-}
 .filter li a {
     text-decoration: none;
     color: #666666;
@@ -334,44 +236,14 @@ header .phone [class*="icon"] {
 .status.new {
     background-color: #78ec71;
 }
-.card {
-    position: relative;
-}
-
-.status {
-    position: absolute;
-    display: block;
-    top: -3px;
-    left: -3px;
-    width: 43px;
-    font-size: 13px;
-    line-height: 20px;
-    text-align: center;
-}
-
-.status.hit {
-    background-color: #6eddcc;
-}
-
-.status.discount {
-    background-color: #ffed03;
-}
-
-.status.new {
-    background-color: #78ec71;
-}
-
-.card {
-    border-bottom: 1px solid #e4e4e4;
-}
 .card .img {
     width: 220px;
     height: 220px;
+    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 .card .title {
     font-size: 15px;
@@ -385,12 +257,6 @@ header .phone [class*="icon"] {
     position: relative;
 }
 
-.card .content .buy {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-}
 .card .content .buy {
     position: absolute;
     bottom: 10px;
@@ -408,8 +274,6 @@ header .phone [class*="icon"] {
     font-weight: 600;
     line-height: 30px;
     color: #333333;
-    display: inline-block;
-    vertical-align: top;
     vertical-align: top;
     display: inline-block;
 }
@@ -421,9 +285,8 @@ header .phone [class*="icon"] {
     text-decoration: line-through;
     color: #666666;
     vertical-align: top;
-    display: inline-block;
-    vertical-align: top;
 }
+
 .card button {
     font-size: 14px;
     line-height: 32px;
@@ -434,21 +297,8 @@ header .phone [class*="icon"] {
     width: 100px;
     display: block;
     float: right;
-    display: block;
-    float: right;
 }
 
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-}
-
-.widgets .wrap {
-    display: flex;
-    justify-content: space-between;
-}
 .widgets h1 {
     font-size: 18px;
     font-weight: 600;
@@ -469,10 +319,12 @@ header .phone [class*="icon"] {
 }
 
 .socialItem {
+    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:  center;
 }
+
 .tabs li a {
     font-size: 14px;
     text-decoration: none;
@@ -481,9 +333,9 @@ header .phone [class*="icon"] {
 }
 
 .info .content {
-    font-size: 12px;
-    line-height: 18px;
-    color: #333333;
+    font-size:12px;
+    line-height:18px;
+    color:#666666;
 }
 
 .info .title {
@@ -514,11 +366,11 @@ footer .copyright {
 footer {
     font-size: 13px;
     line-height: 22px;
-    color: #ffffff;
     background-color: #64ba4a;
+    color: #ffffff;
 }
 
-footer a {
+footer a{
     text-decoration: none;
     color: #ffffff;
 }
@@ -527,84 +379,46 @@ footer a.socLink {
     font-size: 21px;
 }
 
-footer .footMenu {
-    width: 50%;
-    float: left;
-}
 
-footer .contacts {
-    width: 25%;
-    float: left;
-}
-footer .copyright {
-    width: 25%;
-    float: left;
-    text-align: right;
-}
-
-.footMenu ul {
-    width: 50%;
-    float: left;
+.pictureNews {
+    height: 210px;
+    width: 980px;
+    background-color: #b3b3b3;
 }
 
 .breadcrumbs {
     font-size: 12px;
     line-height: 22px;
     color: #999999;
-    margin-bottom: 25px;
+    text-decoration: none;
 }
 
-.content h1 {
+.newsOne {
     font-size: 25px;
     line-height: 22px;
     color: #333333;
-    margin: 0 0 50px;
 }
 
-.content h2 {
+.newsTwo {
     font-size: 18px;
     line-height: 22px;
     color: #333333;
 }
 
-.content span {
+.dataSept {
     font-size: 12px;
     line-height: 22px;
     color: #aaaaaa;
 }
 
-.foto {
-    height: 210px;
-    width: 980px;
-    background-color: #b3b3b3;
-    margin: 20px 0 20px;
-}
-
-.content p {
+.textNews {
     font-size: 13px;
     line-height: 19px;
     color: #333333;
 }
-.content a {
+
+.otherNews {
     font-size: 13px;
     line-height: 22px;
     color: #0069b4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
