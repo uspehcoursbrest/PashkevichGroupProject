@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after{
     box-sizing: border-box;
 }
 
@@ -7,98 +9,138 @@ body {
     font-family: "Open Sans";
 }
 
-
-input, textarea, button {
+input, textarea, button{
     font-family: "Open Sans";
 }
-
 
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 
-ul {
+ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.container {
+.container{
     width: 1010px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.clear::after {
-    content: '';
+.invisLink{
+    position: relative;
+    z-index: 1;
+}
+
+.invisLink > a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.clear::after{
+    content: "";
     display: block;
     clear: both;
 }
 
-header .table {
+header .table{
     display: table;
     width: 100%;
 }
 
 header .left,
 header .logo,
-header .right {
+header .right{
     display: table-cell;
-    width: 33.333%;
+    width: 33.3333%;
     vertical-align: top;
 }
 
-header .logo {
-    text-align: center;
-}
-
-header .right {
-    text-align: right;
-}
-
-header .left {
+header .left{
     text-align: left;
     padding-right: 20px;
 }
-header .login {
+
+header .logo{
+    text-align: center;
+}
+
+header .right{
+    text-align: right;
+}
+
+
+header .login{
     font-size: 13px;
     line-height: 19px;
     color: #0069b4;
 }
 
-header .menu a {
+header .menu a{
     font-size: 13px;
     line-height: 28px;
     color: #333333;
 }
 
-header .menu li {
+header .menu li{
     display: inline-block;
     margin-right: 18px;
 }
 
-header .phone {
+header .phone{
     font-size: 20px;
     line-height: 20px;
     color: #333333;
     text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-header .callback {
+header .phone:hover{
+    color: #1a9547;
+}
+
+header .callback{
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
     color: #0069b4;
     border-bottom: 1px dashed #0069b4;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-header p.callback {
+header .callback:hover{
+    border-bottom: 1px dashed transparent;
+}
+
+header p.timing{
     font-size: 13px;
     line-height: 19px;
     color: #999999;
 }
 
-header .basket {
+header .basket{
     font-size: 13px;
     line-height: 22px;
     color: #333333;
@@ -107,36 +149,65 @@ header .basket {
     padding-left: 28px;
     background-repeat: no-repeat;
     background-position: left center;
-
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-header .basket span {
+a.basket:hover{
     color: #1a9547;
 }
 
-header [class*="icon"] {
-    color: #cbebd5;
+header .basket span{
+    color: #1a9547;
 }
 
-header .login [class*="icon"] {
+header [class*="icon"]{
+    color: #cbebd4;
+}
+
+header .login [class*="icon"]{
+    font-size: 19px;
+}
+
+header .phone [class*="icon"]{
     font-size: 20px;
 }
 
-header .phone [class*="icon"] {
-    font-size: 20px;
+.sale{
+    height: 360px;
+    width: 305px;
 }
 
-.advantages {
+.slider{
+    height: 360px;
+    width: 640px;
+}
+
+.banner > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.advantages{
     width: calc(100% - 320px);
     float: left;
 }
 
-.advantages .item {
+.banner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages .item{
     width: 25%;
     float: left;
 }
 
-.advantages .item span {
+.advantages .item span{
     font-size: 14px;
     font-weight: bold;
     line-height: 17px;
@@ -144,77 +215,101 @@ header .phone [class*="icon"] {
     display: block;
 }
 
-.advantages .item p {
+.advantages .item p{
     font-size: 12px;
     line-height: 14px;
     color: #666666;
 }
 
-.subscribe {
+.subscribe{
     background-color: #64b94a;
     width: 320px;
     float: left;
     padding: 20px;
 }
 
-.subscribe .wrap {
-    display: table;
-    width: 100%;
-}
-
-.subscribe label {
+.subscribe label{
     font-size: 16px;
     color: #ffffff;
 }
 
-.subscribe input {
+.subscribe input{
     font-size: 13px;
     line-height: 37px;
     color: #999999;
     width: 100%;
     border: none;
-}
-
-.subscribe button {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 13px;
-    line-height: 37px;
-    text-align:center ;
-    width: 190px;
-    color: #ffffff;
-    background-color: #259c47;
-    border:none;
-}
-
-.subscribe .wrap span {
-    font-size: 12px;
-    display: table-cell;
-    vertical-align: middle;
-    color: rgba(255, 255, 255, 0.5);
     padding-left: 10px;
 }
-.filter li {
+
+.subscribe input::placeholder{
+    font-size: 13px;
+    line-height: 37px;
+    color: #999999;
+}
+
+.subscribe button{
+    font-size: 13px;
+    line-height: 37px;
+    text-align: center;
+    width: 190px;
+    background-color: #259c47;
+    color: #ffffff;
+    border: none;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.subscribe .wrap span{
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 17px;
+}
+
+.subscribe .wrap{
+    display: table;
+    width: 100%;
+}
+
+.filter li{
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px dashed #666666;
     display: inline-block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.filter li + li {
+.filter li:hover{
+    border-bottom: 1px dashed transparent;
+}
+
+.filter li + li{
     margin-left: 20px;
 }
 
-.filter li a {
+.filter li a{
     text-decoration: none;
     color: #666666;
 }
 
-.card {
-    position: relative;
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
 }
 
-.status {
+.card{
+    position: relative;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.status{
     position: absolute;
     display: block;
     top: -3px;
@@ -225,18 +320,19 @@ header .phone [class*="icon"] {
     text-align: center;
 }
 
-.status.hit {
+.status.hit{
     background-color: #6eddcc;
 }
 
-.status.discount {
+.status.discount{
     background-color: #ffed03;
 }
 
-.status.new {
+.status.new{
     background-color: #78ec71;
 }
-.card .img {
+
+.card .img{
     width: 220px;
     height: 220px;
     -webkit-background-size: cover;
@@ -245,61 +341,63 @@ header .phone [class*="icon"] {
     background-position: center;
 }
 
-.card .title {
+.card .title{
     font-size: 15px;
     line-height: 22px;
     color: #333333;
     display: block;
 }
 
-.card .content {
+.card .content{
     min-height: 110px;
     position: relative;
 }
 
-.card .content .buy {
+.card .content .buy{
     position: absolute;
     bottom: 10px;
-    left: 0px;
+    left: 0;
     width: 100%;
 }
-.card a {
+
+.card a{
     font-size: 15px;
     line-height: 22px;
     color: #0069b4;
 }
 
-.card .price {
+.card .price{
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     color: #333333;
-    vertical-align: top;
     display: inline-block;
+    vertical-align: top;
 }
 
-.card .price .old {
+.card .price .old{
     font-size: 14px;
     font-weight: normal;
     line-height: 25px;
     text-decoration: line-through;
     color: #666666;
+    display: inline-block;
     vertical-align: top;
 }
 
-.card button {
+.card button{
     font-size: 14px;
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    width: 100px;
     background-color: #ff7200;
     border: none;
-    width: 100px;
     display: block;
     float: right;
 }
 
-.widgets h1 {
+.widgets h1{
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -307,47 +405,81 @@ header .phone [class*="icon"] {
     color: #666666;
 }
 
+.widgets .wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
 .socialItem:first-child,
-.socialItem:last-child {
+.socialItem:last-child{
     width: 290px;
     height: 400px;
 }
 
-.socialItem:nth-child(2) {
+.socialItem:nth-child(2){
     width: 350px;
     height: 400px;
 }
 
-.socialItem {
+.socialItem{
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:  center;
+    background-position: center;
 }
 
-.tabs li a {
+.info .tabs li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.tabs li a{
     font-size: 14px;
     text-decoration: none;
     line-height: 45px;
     color: #999999;
 }
 
-.info .content {
-    font-size:12px;
-    line-height:18px;
-    color:#666666;
+.info .content{
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
 }
 
-.info .title {
+.info .title{
     text-transform: uppercase;
+    position: relative;
+    padding-left: 25px;
+    display: block;
 }
 
-footer .footMenu {
+.info .title::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #333333;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -3px;
+}
+
+footer{
+    font-size: 13px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: #64ba4a;
+}
+
+footer .footMenu{
     width: 50%;
     float: left;
 }
 
-.footMenu .call {
+.footMenu .col{
     width: 50%;
     float: left;
 }
@@ -357,17 +489,10 @@ footer .contacts{
     float: left;
 }
 
-footer .copyright {
+footer .copyright{
     width: 25%;
     float: left;
     text-align: right;
-}
-
-footer {
-    font-size: 13px;
-    line-height: 22px;
-    background-color: #64ba4a;
-    color: #ffffff;
 }
 
 footer a{
@@ -375,50 +500,119 @@ footer a{
     color: #ffffff;
 }
 
-footer a.socLink {
+footer a.socLink{
     font-size: 21px;
 }
 
-
-.pictureNews {
-    height: 210px;
-    width: 980px;
-    background-color: #b3b3b3;
-}
-
-.breadcrumbs {
-    font-size: 12px;
+.content .breadcrumbs span{
+    font-size: 13px;
     line-height: 22px;
     color: #999999;
+    font-weight: normal;
+}
+
+.content .breadcrumbs a{
     text-decoration: none;
 }
 
-.newsOne {
+.content h2{
     font-size: 25px;
     line-height: 22px;
+    font-weight: 600;
     color: #333333;
 }
 
-.newsTwo {
+.content h3{
     font-size: 18px;
     line-height: 22px;
+    font-weight: 600;
     color: #333333;
 }
 
-.dataSept {
+.content > span{
     font-size: 12px;
     line-height: 22px;
+    font-weight: normal;
     color: #aaaaaa;
 }
 
-.textNews {
+.content > p{
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: normal;
+    color: #333333;
+}
+
+.content > a{
+    font-size: 13px;
+    line-height: 22px;
+    color: #0069b4;
+}
+
+.content .field{
+    width: 980px;
+    height: 210px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #b3b3b3;
+}
+
+/*страница с оформлением заказа*/
+
+.orderList li{
+    padding-left: 40px;
+}
+
+.orderList label{
+    position: relative;
+    padding-left: 40px;
+    margin-left: -40px;
     font-size: 13px;
     line-height: 19px;
     color: #333333;
 }
 
-.otherNews {
-    font-size: 13px;
-    line-height: 22px;
-    color: #0069b4;
+.radioBtn{
+    display: none;
+}
+
+.radioBtn:not(checked) + label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d4d4d4;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radioBtn:not(checked) + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: #51bf87;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.radioBtn:checked + label::before{
+    border-color: #51bf87;
+}
+
+.radioBtn:checked + label::after{
+    opacity: 1;
+}
+
+.radioBtn + label{
+    cursor: pointer;
 }
