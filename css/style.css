@@ -1,40 +1,45 @@
+
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
 body {
     margin: 0 auto;
+    font-family: "OpenSans";
+
+}
+
+input, textarea, button {
     font-family: "Open Sans";
 }
 
-input, textarea, button{
-    font-family: "Open Sans";
-}
-
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.container{
+a:hover {
+    text-decoration: none;
+}
+.container {
     width: 1010px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.invisLink{
+.invisLink {
     position: relative;
     z-index: 1;
 }
 
-.invisLink > a{
+.invisLink > a {
     display: block;
     position: absolute;
     left: 0;
@@ -47,61 +52,53 @@ ul{
     white-space: nowrap;
 }
 
-a:hover{
-    text-decoration: none;
-}
-
-.clear::after{
-    content: "";
+.clear::after {
+    content: '';
     display: block;
     clear: both;
 }
 
-header .table{
-    display: table;
-    width: 100%;
+.tabs li {
+    padding: 0px 15px;
+    display: inline-block;
 }
+header .table {
+    display: table;
 
-header .left,
-header .logo,
-header .right{
+}
+header .left {
+    padding-right: 20px;
+}
+header .left, header .logo, header .right{
     display: table-cell;
-    width: 33.3333%;
+    width: 33%;
     vertical-align: top;
 }
 
-header .left{
-    text-align: left;
-    padding-right: 20px;
-}
-
-header .logo{
+header .logo {
     text-align: center;
 }
 
-header .right{
+header .right {
     text-align: right;
 }
-
-
-header .login{
+header .login {
     font-size: 13px;
     line-height: 19px;
     color: #0069b4;
 }
 
-header .menu a{
+header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
 }
 
-header .menu li{
+header .menu li {
     display: inline-block;
     margin-right: 18px;
 }
-
-header .phone{
+header .phone {
     font-size: 20px;
     line-height: 20px;
     color: #333333;
@@ -113,11 +110,10 @@ header .phone{
     transition: all 0.3s;
 }
 
-header .phone:hover{
-    color: #1a9547;
+header .phone:hover {
+    color: green;
 }
-
-header .callback{
+header .callback {
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
@@ -130,17 +126,17 @@ header .callback{
     transition: all 0.3s;
 }
 
-header .callback:hover{
+header .callback:hover {
     border-bottom: 1px dashed transparent;
 }
 
-header p.timing{
+header p.timing {
     font-size: 13px;
     line-height: 19px;
-    color: #999999;
+    color: #1a9547;
 }
 
-header .basket{
+header .basket {
     font-size: 13px;
     line-height: 22px;
     color: #333333;
@@ -149,65 +145,49 @@ header .basket{
     padding-left: 28px;
     background-repeat: no-repeat;
     background-position: left center;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
-a.basket:hover{
+a.basket:hover {
+    color: #1a9547;
+}
+header .basket span {
     color: #1a9547;
 }
 
-header .basket span{
-    color: #1a9547;
+header [class*="icon"] {
+    color: #cbebd5;
 }
 
-header [class*="icon"]{
-    color: #cbebd4;
-}
-
-header .login [class*="icon"]{
+header .login [class*="icon"] {
     font-size: 19px;
 }
 
-header .phone [class*="icon"]{
+header .phone [class*="icon"] {
     font-size: 20px;
 }
 
-.sale{
-    height: 360px;
+
+.banner .sale {
     width: 305px;
-}
-
-.slider{
     height: 360px;
-    width: 640px;
 }
 
-.banner > div{
+.banner .slider {
+    width: 640px;
+    height: 360px;
+}
+
+.banner>div {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.advantages{
-    width: calc(100% - 320px);
-    float: left;
-}
-
-.banner{
+.banner {
     display: flex;
     justify-content: space-between;
 }
-
-.advantages .item{
-    width: 25%;
-    float: left;
-}
-
-.advantages .item span{
+.advantages .item span {
     font-size: 14px;
     font-weight: bold;
     line-height: 17px;
@@ -215,25 +195,33 @@ header .phone [class*="icon"]{
     display: block;
 }
 
-.advantages .item p{
+.advantages .item p {
     font-size: 12px;
     line-height: 14px;
     color: #666666;
 }
+.advantages {
+    width: calc(100% - 320px);
+    float: left;
+}
 
-.subscribe{
-    background-color: #64b94a;
+.advantages .item {
+    width: 25%;
+    float: left;
+}
+.subscribe {
+    background-color: #64ba4a;
     width: 320px;
     float: left;
     padding: 20px;
 }
 
-.subscribe label{
+.subscribe label {
     font-size: 16px;
     color: #ffffff;
 }
 
-.subscribe input{
+.subscribe input {
     font-size: 13px;
     line-height: 37px;
     color: #999999;
@@ -241,43 +229,46 @@ header .phone [class*="icon"]{
     border: none;
     padding-left: 10px;
 }
-
-.subscribe input::placeholder{
+.subscribe input::placeholder {
     font-size: 13px;
-    line-height: 37px;
     color: #999999;
 }
-
-.subscribe button{
+.subscribe button {
     font-size: 13px;
     line-height: 37px;
     text-align: center;
+    color: #ffffff;
     width: 190px;
     background-color: #259c47;
-    color: #ffffff;
     border: none;
-    vertical-align: middle;
     display: table-cell;
+    vertical-align: middle;
 }
 
-.subscribe .wrap span{
+.subscribe .wrap span {
     font-size: 12px;
     color: rgba(255,255,255,0.5);
     display: table-cell;
     vertical-align: middle;
-    padding-left: 17px;
+    padding-left: 15px;
+    line-height: 1;
 }
 
-.subscribe .wrap{
+.subscribe .wrap {
     display: table;
     width: 100%;
 }
 
-.filter li{
+.filter li {
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px dashed #666666;
     display: inline-block;
+
+}
+
+.filter li:hover {
+    border-bottom: 1px dashed transparent;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -285,31 +276,27 @@ header .phone [class*="icon"]{
     transition: all 0.3s;
 }
 
-.filter li:hover{
-    border-bottom: 1px dashed transparent;
-}
-
-.filter li + li{
+.filter li+li {
     margin-left: 20px;
 }
-
-.filter li a{
+.filter li a {
     text-decoration: none;
     color: #666666;
 }
-
-.cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-}
-
-.card{
+.filter{
     position: relative;
-    border-bottom: 1px solid #e4e4e4;
+}
+.filter .view{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.status{
+.card {
+    position: relative;
+}
+
+.status {
     position: absolute;
     display: block;
     top: -3px;
@@ -320,53 +307,55 @@ header .phone [class*="icon"]{
     text-align: center;
 }
 
-.status.hit{
+.status.hit {
     background-color: #6eddcc;
 }
 
-.status.discount{
+.status.discount {
     background-color: #ffed03;
 }
 
-.status.new{
+.status.new {
     background-color: #78ec71;
 }
 
-.card .img{
+.card {
+    border-bottom: 1px solid #e4e4e4;
+}
+.card .img {
     width: 220px;
     height: 220px;
-    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.card .title{
+
+.card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
     display: block;
 }
 
-.card .content{
+.card .content {
     min-height: 110px;
     position: relative;
 }
 
-.card .content .buy{
+.card .content .buy {
     position: absolute;
     bottom: 10px;
     left: 0;
     width: 100%;
 }
-
-.card a{
+.card a {
     font-size: 15px;
     line-height: 22px;
     color: #0069b4;
 }
 
-.card .price{
+.card .price {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
@@ -375,7 +364,7 @@ header .phone [class*="icon"]{
     vertical-align: top;
 }
 
-.card .price .old{
+.card .price .old {
     font-size: 14px;
     font-weight: normal;
     line-height: 25px;
@@ -384,20 +373,30 @@ header .phone [class*="icon"]{
     display: inline-block;
     vertical-align: top;
 }
-
-.card button{
+.card button {
     font-size: 14px;
     line-height: 32px;
     text-align: center;
     color: #ffffff;
-    width: 100px;
     background-color: #ff7200;
     border: none;
+    width: 100px;
     display: block;
     float: right;
 }
 
-.widgets h1{
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.widgets .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.widgets h1 {
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -405,59 +404,47 @@ header .phone [class*="icon"]{
     color: #666666;
 }
 
-.widgets .wrap{
-    display: flex;
-    justify-content: space-between;
-}
-
 .socialItem:first-child,
-.socialItem:last-child{
+.socialItem:last-child {
     width: 290px;
     height: 400px;
 }
 
-.socialItem:nth-child(2){
+.socialItem:nth-child(2) {
     width: 350px;
     height: 400px;
 }
 
-.socialItem{
-    -webkit-background-size: cover;
+.socialItem {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.info .tabs li{
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.tabs li a{
+.tabs li a {
     font-size: 14px;
     text-decoration: none;
     line-height: 45px;
     color: #999999;
 }
 
-.info .content{
+.info .content {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
 }
 
-.info .title{
+.info .title {
     text-transform: uppercase;
     position: relative;
     padding-left: 25px;
     display: block;
 }
 
-.info .title::before{
-    content: "";
+.info .title::before {
+    content: '';
     display: block;
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-top: 5px solid #333333;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -466,106 +453,91 @@ header .phone [class*="icon"]{
     top: 50%;
     margin-top: -3px;
 }
-
-footer{
+footer {
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
     background-color: #64ba4a;
 }
 
-footer .footMenu{
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a.socLink {
+    font-size: 21px;
+}
+
+footer .footMenu {
     width: 50%;
     float: left;
 }
 
-.footMenu .col{
-    width: 50%;
-    float: left;
-}
-
-footer .contacts{
+footer .contacts {
     width: 25%;
     float: left;
 }
-
-footer .copyright{
+footer .copyright {
     width: 25%;
     float: left;
     text-align: right;
 }
 
-footer a{
-    text-decoration: none;
-    color: #ffffff;
+.footMenu ul {
+    width: 50%;
+    float: left;
 }
 
-footer a.socLink{
-    font-size: 21px;
-}
-
-.content .breadcrumbs span{
-    font-size: 13px;
-    line-height: 22px;
-    color: #999999;
-    font-weight: normal;
-}
-
-.content .breadcrumbs a{
-    text-decoration: none;
-}
-
-.content h2{
-    font-size: 25px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #333333;
-}
-
-.content h3{
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #333333;
-}
-
-.content > span{
+.breadcrumbs {
     font-size: 12px;
     line-height: 22px;
-    font-weight: normal;
+    color: #999999;
+    margin-bottom: 25px;
+}
+
+.content h1 {
+    font-size: 25px;
+    line-height: 22px;
+    color: #333333;
+    margin: 0 0 50px;
+}
+
+.content h2 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.content span {
+    font-size: 12px;
+    line-height: 22px;
     color: #aaaaaa;
 }
 
-.content > p{
-    font-size: 13px;
-    line-height: 19px;
-    font-weight: normal;
-    color: #333333;
+.foto {
+    height: 210px;
+    width: 980px;
+    background-color: #b3b3b3;
+    margin: 20px 0 20px;
 }
 
-.content > a{
+.content p {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+.content a {
     font-size: 13px;
     line-height: 22px;
     color: #0069b4;
 }
 
-.content .field{
-    width: 980px;
-    height: 210px;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #b3b3b3;
-}
-
-/*страница с оформлением заказа*/
-
-.orderList li{
+.orderList li {
     padding-left: 40px;
 }
 
-.orderList label{
+.orderList label {
     position: relative;
     padding-left: 40px;
     margin-left: -40px;
@@ -574,12 +546,12 @@ footer a.socLink{
     color: #333333;
 }
 
-.radioBtn{
+.radioBtn {
     display: none;
 }
 
-.radioBtn:not(checked) + label::before{
-    content: "";
+.radioBtn:not(checked) + label::before {
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -591,8 +563,8 @@ footer a.socLink{
     transition: all 0.3s;
 }
 
-.radioBtn:not(checked) + label::after{
-    content: "";
+.radioBtn:not(checked) + label::after {
+    content: '';
     display: block;
     position: absolute;
     top: 7px;
@@ -605,40 +577,273 @@ footer a.socLink{
     transition: all 0.3s;
 }
 
-.radioBtn:checked + label::before{
+.radioBtn:checked + label::before {
     border-color: #51bf87;
 }
 
-.radioBtn:checked + label::after{
+radioBtn:checked + label::after {
     opacity: 1;
 }
 
-.radioBtn + label{
+.radioBtn + label {
     cursor: pointer;
+}
+
+.breadcrumbs a{
+    font-size: 12px;
+    line-height: 22px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.breadcrumbs li{
+    float: left;
+
+}
+
+.selectB1 label{
+    float: left;
+    width: 120px;
+}
+.selectB1 option{
+    float: left;
+    width: 200px;
+}
+
+.content h2{
+    font-size: 25px;
+    line-height: 22px;
+    color: #333333;
+    display: block;
+}
+
+.selectBl label{
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+.selectBl option{
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+.orderList label{
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.orderList li{
+    padding: 10px 0px;
+}
+.formBlock .text{
+    font-size: 15px;
+    line-height: 22px;
+    color: #666666;
+}
+.orderList p{
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+.orderList .additionalService{
+    font-size: 12px;
+    line-height: 18px;
+    color: #f26522;
+}
+.content button{
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: #64ba4a;
+    width: 190px;
+    height: 30px;
+    border: none;
+}
+
+.formBlock .text{
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+}
+.formBlock label{
+    font-size: 13px;
+    line-height: 22px;
+    font-style: italic;
+    color: #666666;
+
+}
+.formBlock input{
+    display: block;
+    border: 1px solid #d6d6d6;
+    width: 190px;
+}
+.formBlock textarea{
+    display: block;
+    border: 1px solid #d6d6d6;
+}
+.formBlock span{
+    font-size: 13px;
+    line-height: 22px;
+    font-style: italic;
+    color: #64ba4a;
+}
+.formBlock div{
+    display: inline-block;
+    padding: 10px 330px 10px 0;
+
+}
+.formBlock .text{
+    display: inline-block;
+    padding-right: 400px;
+}
+.clientWrap .left p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.clientWrap .left label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+.formClient {
+    height: 620px;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+.formClient input{
+    width: 280px;
+    border: 1px solid #d6d6d6;
+    display: block;
+}
+.formClient textarea{
+    width: 280px;
+    border: 1px solid #d6d6d6;
+    display: block;
+    height: 120px;
+}
+
+.formClient label{
+    font-style: italic;
+    font-size: 13px;
+    color: #666666;
+}
+
+.cfix span:nth-child(1){
+    font-style: normal;
+    font-size: 13px;
+}
+.cfix span:nth-child(3){
+    font-style: normal;
+    font-size: 11px;
+    color: #999999;
+}
+
+header.mobile {
+    display: none;
+    position: relative;
+    padding: 18px 0;
+    background-color: #63ba49;
+}
+
+.filterMobile {
+    display: none;
+    position: relative;
+    border-color: #bebebe;
+    padding: 20px;
+}
+
+.filterMobile .view{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px 0;
+}
+
+header.mobile .menuMobile{
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menuMobile:before{
+    content: '';
+    display: block;
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: -12px;
+    left: 0;
+}
+.menuMobile:after{
+    content: '';
+    display: block;
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+.logoMobile{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 180px;
+    height: 125px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+}
+.basketMobile {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 45px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+
+}
+
+.mobileSub{
+    display: none;
+    margin-bottom: 50px;
+    padding: 0 5px;
+    text-align: center;
 }
 
 @media (max-width: 1199px) {
     .container {
         width: 980px;
     }
-
-    .sale {
+    .banner .sale{
         height: 350px;
         width: 295px;
     }
-
-    .slider {
+    .banner .slider {
         height: 350px;
         width: 620px;
     }
     .subscribe {
         width: 300px;
     }
-
     .advantages {
         width: calc(100% - 300px);
     }
-
     .widgets {
         display: none;
     }
@@ -649,7 +854,8 @@ footer a.socLink{
         justify-content: space-between;
     }
     .card {
-        flex: 0 0 250px;
+        flex: 0 0 220px;
+
     }
 }
 
@@ -661,18 +867,39 @@ footer a.socLink{
 
 @media (max-width: 767px) {
     .container {
-        width: 100px;
-    }
-}
-
-@media (max-width: 991px) {
-    .container{
-        width: 780px;
-    }
-}
-
-@media (max-width: 767px) {
-    .container{
         width: 100%;
     }
+
+    header.mobile {
+        display: block;
+    }
+
+    .banner .sale,
+    .banner .slider,
+    .subscribe,
+    .advantages,
+    .widgets,
+    header .table,
+    .filter,
+    .tabs,
+    .accordion{
+        display: none;
+    }
+    .filterMobile{
+        display: block;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 1 0 270px;
+    }
+    .mobileSub{
+        display: block;
+    }
+
 }
