@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -7,7 +6,7 @@
 
 body {
     margin: 0 auto;
-    font-family: "OpenSans";
+    font-family: "Open Sans";
 
 }
 
@@ -111,7 +110,7 @@ header .phone {
 }
 
 header .phone:hover {
-    color: green;
+    color: red;
 }
 header .callback {
     font-size: 12px;
@@ -171,55 +170,52 @@ header .phone [class*="icon"] {
     width: 305px;
     height: 360px;
 }
+.banner .slider {
+    width: 640px;
+    height: 360px;
+}
 
-.banner{
+.banner>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner {
     display: flex;
     justify-content: space-between;
 }
-.banner>div{
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-}
-.sale{
-    width:305px;
-    height: 360px;
-
-}
-.slider{
+.banner .sliderWrap {
+    float: left;
     position: relative;
     width: 640px;
+    z-index: -1;
 }
-.banner .slider .item{
-    width: 645px;
+
+.slider .item {
     height: 360px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
-#customDots {
+.sliderWrap .dots{
     position: absolute;
-    bottom: 0px;
-    right: 30px;
+    bottom: 10px;
+    right: 20px;
     z-index: 1;
 }
-
-#customDots button {
-    padding: 0;
-    border: none;
-    width: 8px;
-    height: 8px;
-    background-color: #666666;
+.sliderWrap .dots button{
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
-    opacity: 0.7;
-    margin: 0 4px;
+    margin-left: 20px;
 }
 
-#customDots button:hover {
-    opacity: 1;
+.sliderWrap .dots .active{
+    background-color: #fff;
 }
-
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
@@ -266,7 +262,7 @@ header .phone [class*="icon"] {
     font-size: 13px;
     color: #999999;
 }
-.subscribe button {
+.mobileSub button {
     font-size: 13px;
     line-height: 37px;
     text-align: center;
@@ -321,41 +317,12 @@ header .phone [class*="icon"] {
 }
 .filter .view{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
 }
 
 .card {
     position: relative;
-    z-index: 1;
-}
-.thumbnail {
-    position: absolute;
-    display: none;
-    top: -12px;
-    right: 2px;
-    padding: 11px;
-    width: 313px;
-    height: 356px;
-    background-color: #ffffff;
-    border: 1px solid #e1e1e1;
-    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0 7px 10px rgba(0,0,0,0.1);
-    box-shadow: 0 7px 10px rgba(0,0,0,0.1);
-    z-index: -1;
-}
-
-.thumbnail .pic {
-    margin-bottom: 10px;
-    width: 53px;
-    height: 53px;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.thumbnail .pic.active {
-    border: 1px solid #259c47;
 }
 
 .status {
@@ -383,6 +350,7 @@ header .phone [class*="icon"] {
 
 .card {
     border-bottom: 1px solid #e4e4e4;
+    z-index: 1;
 }
 .card .img {
     width: 220px;
@@ -442,7 +410,7 @@ header .phone [class*="icon"] {
     color: #ffffff;
     background-color: #ff7200;
     border: none;
-    width: 100px;
+    width: 100px !important;
     display: block;
     float: right;
 }
@@ -452,6 +420,34 @@ header .phone [class*="icon"] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+
+}
+
+.thumbnail {
+    position: absolute;
+    display: none;
+    top: -10px;
+    right: 2px;
+    padding: 11px;
+    width: 313px;
+    height: 356px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+
+.thumbnail  .pic{
+    margin-bottom: 10px;
+    width: 53px;
+    height: 53px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thumbnail .pic.active{
+    border: 1px solid #259c47;
 }
 
 .widgets .wrap {
@@ -505,8 +501,8 @@ header .phone [class*="icon"] {
 .info .title::before {
     content: '';
     display: block;
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-top: 5px solid #333333;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -516,15 +512,115 @@ header .phone [class*="icon"] {
     margin-top: -3px;
 }
 
-.info .title.active::before {
+.info .title.active::before{
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
-
 }
 
+.info.ui-tabs {
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav li {
+    margin: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin: 0;
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0 15px;
+}
+
+.info.ui-tabs .ui-tabs-panel {
+    padding: 0;
+}
+
+.info .tabs a{
+    display: block;
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+    padding: 0 15px;
+    outline: none;
+    height: 45px;
+    line-height: 45px;
+}
+
+.info .tabs li.ui-tabs-active a,
+.info .tabs li a:hover {
+    border: none;
+    background-color: #f2fff7;
+    color: #1c9847;
+    cursor: pointer;
+}
+
+.selectBl {
+    width: 290px;
+}
+
+.selectB1 .selectric {
+    width: 100%;
+    height: 28px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+}
+
+.selectB1 .selectric .label {
+    font-size: 13px;
+    line-height: 26px;
+    color: #333333;
+}
+
+.selectB1 .selectric .button {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 7px solid #00a48c;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-top: -2px;
+    background-color: transparent;
+}
+
+.selectB1 .selectric .button::after {
+    display: none;
+}
+
+.selectBl .selectric-items {
+    border: 1px solid #d6d6d6;
+}
+
+.selectBl .selectric-items li {
+    padding: 0;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 26;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.selectB1 .select-items li:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.up{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+
+}
 footer {
     font-size: 13px;
     line-height: 22px;
@@ -732,7 +828,7 @@ radioBtn:checked + label::after {
     font-size: 14px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #64ba4a;
+    background-color: #ff7200;
     width: 190px;
     height: 30px;
     border: none;
@@ -750,7 +846,7 @@ radioBtn:checked + label::after {
     color: #666666;
 
 }
-.formBlock input{
+.formBlock input[type='text']{
     display: block;
     border: 1px solid #d6d6d6;
     width: 190px;
@@ -765,7 +861,7 @@ radioBtn:checked + label::after {
     font-style: italic;
     color: #64ba4a;
 }
-.formBlock div{
+.formBlock > div{
     display: inline-block;
     padding: 10px 330px 10px 0;
 
